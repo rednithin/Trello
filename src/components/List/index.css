@@ -16,6 +16,8 @@
   word-wrap: break-word;
   padding: 5px;
   border-bottom: 2px solid red;
+  display: flex;
+  justify-content: space-between;
 }
 
 .list__tasks {

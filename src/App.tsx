@@ -26,7 +26,7 @@ const App = () => {
           break;
         }
       }
-      console.log({initialListId});
+      console.log({ initialListId });
       let newListCollection: Record<string, IList> = {
         ...listCollection,
         [initialListId]: {
@@ -62,6 +62,26 @@ const App = () => {
     });
   };
 
+  const removeList = ({ listId }: any) => {
+    const newListCollection = { ...listCollection };
+    delete newListCollection[listId];
+    setListCollection(newListCollection);
+  };
+
+  const removeTask = ({ listId, taskId }: any) => {
+    const newListCollection: Record<string, IList> = {
+      ...listCollection,
+      [listId]: {
+        ...listCollection[listId],
+        tasks: {
+          ...listCollection[listId].tasks,
+        },
+      },
+    };
+    delete newListCollection[listId].tasks[taskId];
+    setListCollection(newListCollection);
+  };
+
   const addNewTask = ({ listId, name, description }: any) => {
     const newTask = createNewTask(name, description);
     setListCollection({
@@ -78,7 +98,7 @@ const App = () => {
 
   // eslint-disable-next-line
   const [_, dispatch] = useAppContext();
-  
+
   return (
     <div className="app">
       <div className="app__heading">Trello Board</div>
@@ -89,7 +109,13 @@ const App = () => {
       </div>
       <div className="list-collection">
         {Object.values(listCollection || {})?.map((list) => (
-          <List key={list.id} item={list} callback={dropCallback} />
+          <List
+            key={list.id}
+            item={list}
+            callback={dropCallback}
+            removeList={removeList}
+            removeTask={removeTask}
+          />
         ))}
       </div>
       <AddListModal addNewList={addNewList} />

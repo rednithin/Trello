@@ -9,6 +9,8 @@
 .task__heading {
   padding: 5px;
   border-bottom: 2px solid tomato;
+  display: flex;
+  justify-content: space-between;
 }
 
 .task__description {
