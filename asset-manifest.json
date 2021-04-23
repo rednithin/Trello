@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "https://rednithin.github.io/Trello/static/css/main.1419e9a5.chunk.css",
-    "main.js": "https://rednithin.github.io/Trello/static/js/main.dc49886f.chunk.js",
-    "main.js.map": "https://rednithin.github.io/Trello/static/js/main.dc49886f.chunk.js.map",
+    "main.css": "https://rednithin.github.io/Trello/static/css/main.892648d1.chunk.css",
+    "main.js": "https://rednithin.github.io/Trello/static/js/main.ce762b0e.chunk.js",
+    "main.js.map": "https://rednithin.github.io/Trello/static/js/main.ce762b0e.chunk.js.map",
     "runtime-main.js": "https://rednithin.github.io/Trello/static/js/runtime-main.10cb2d41.js",
     "runtime-main.js.map": "https://rednithin.github.io/Trello/static/js/runtime-main.10cb2d41.js.map",
     "static/js/2.74f6850d.chunk.js": "https://rednithin.github.io/Trello/static/js/2.74f6850d.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.825ef185.chunk.js": "https://rednithin.github.io/Trello/static/js/3.825ef185.chunk.js",
     "static/js/3.825ef185.chunk.js.map": "https://rednithin.github.io/Trello/static/js/3.825ef185.chunk.js.map",
     "index.html": "https://rednithin.github.io/Trello/index.html",
-    "static/css/main.1419e9a5.chunk.css.map": "https://rednithin.github.io/Trello/static/css/main.1419e9a5.chunk.css.map",
+    "static/css/main.892648d1.chunk.css.map": "https://rednithin.github.io/Trello/static/css/main.892648d1.chunk.css.map",
     "static/js/2.74f6850d.chunk.js.LICENSE.txt": "https://rednithin.github.io/Trello/static/js/2.74f6850d.chunk.js.LICENSE.txt",
     "static/media/Add.e0de3a43.svg": "https://rednithin.github.io/Trello/static/media/Add.e0de3a43.svg",
     "static/media/Close.e2c00e65.svg": "https://rednithin.github.io/Trello/static/media/Close.e2c00e65.svg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.10cb2d41.js",
     "static/js/2.74f6850d.chunk.js",
-    "static/css/main.1419e9a5.chunk.css",
-    "static/js/main.dc49886f.chunk.js"
+    "static/css/main.892648d1.chunk.css",
+    "static/js/main.ce762b0e.chunk.js"
   ]
 }
