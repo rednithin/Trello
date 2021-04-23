@@ -21,4 +21,5 @@
 
 .list-collection {
   display: flex;
+  flex-wrap: wrap;
 }

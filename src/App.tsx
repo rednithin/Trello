@@ -117,6 +117,11 @@ const App = () => {
             removeTask={removeTask}
           />
         ))}
+        {Array(8)
+          .fill(0)
+          .map((x) => (
+            <div className="list list--dummy"></div>
+          ))}
       </div>
       <AddListModal addNewList={addNewList} />
       <AddTaskModal addNewTask={addNewTask} />

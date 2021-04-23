@@ -78,7 +78,7 @@ const useDrop = ({ dropKey, callback, computeDroppable }: IUseDropArgs) => {
     element.className = backupClass;
     const dragId = e.dataTransfer.getData("dragId");
     callback?.({ container: element, dragId, dropId });
-    if(dragId && dropId) {
+    if (dragId && dropId) {
       dispatch(setDndStatus(false));
     }
   };
