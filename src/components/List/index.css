@@ -1,0 +1,43 @@
+.list {
+  position: relative;
+  min-width: 250px;
+  background-color: bisque;
+  border-radius: 4px;
+  min-height: 500px;
+  margin: 20px;
+  height: 100%;
+  font-size: x-large;
+  display: flex;
+  flex-direction: column;
+}
+
+.list__heading {
+  text-align: center;
+  word-wrap: break-word;
+  padding: 5px;
+  border-bottom: 2px solid red;
+}
+
+.list__tasks {
+  padding: 5px;
+  flex: 1;
+  border-bottom: 2px solid red;
+}
+
+.list__add_task {
+  text-align: center;
+  padding: 5px;
+}
+
+.list__dnd_mask {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 90;
+}
+
+.drop--hovered {
+  border: 5px double seagreen;
+}

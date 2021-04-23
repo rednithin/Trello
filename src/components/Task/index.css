@@ -1,0 +1,25 @@
+.task {
+  max-width: 250px;
+  background-color: rosybrown;
+  border-radius: 4px;
+  min-height: 200px;
+  margin: 25px 10px;
+}
+
+.task__heading {
+  padding: 5px;
+  border-bottom: 2px solid tomato;
+}
+
+.task__description {
+  padding: 5px;
+  font-size: medium;
+}
+
+.drag--invisible {
+  visibility: hidden;
+}
+
+.drag--border {
+  border: 5px double darkviolet;
+}
