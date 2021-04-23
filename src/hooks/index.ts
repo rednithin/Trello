@@ -18,14 +18,13 @@ const useDrag = ({ dragKey }: IUseDragArgs = {}) => {
     const element = e.target as any;
     setBackupClass(element.className ?? "");
     element.className += " drag--border";
-    setTimeout(() => (element.className += " drag--invisible"));
+    setImmediate(() => (element.className += " drag--invisible"));
     e.dataTransfer.setData("dragId", dragId);
-    dispatch(setDndStatus(true));
+    setImmediate(() => dispatch(setDndStatus(true)));
   };
   const onDragEnd = (e: DragEvent) => {
     const element = e.target as any;
     element.className = backupClass;
-    setBackupClass("");
     dispatch(setDndStatus(false));
   };
   return {
@@ -51,7 +50,8 @@ interface IUseDropArgs {
 const useDrop = ({ dropKey, callback, computeDroppable }: IUseDropArgs) => {
   const [backupClass, setBackupClass] = useState("");
   const [dropId] = useState(dropKey ?? uuidv4());
-
+  // eslint-disable-next-line
+  const [_, dispatch] = useDnD();
   const onDragOver = (e: DragEvent) => {
     e.preventDefault();
   };
@@ -71,7 +71,6 @@ const useDrop = ({ dropKey, callback, computeDroppable }: IUseDropArgs) => {
     element.className = backupClass;
   };
   const onDrop = (e: DragEvent) => {
-    console.log(e);
     const element = computeDroppable(e);
     if (!element) {
       return;
@@ -79,6 +78,9 @@ const useDrop = ({ dropKey, callback, computeDroppable }: IUseDropArgs) => {
     element.className = backupClass;
     const dragId = e.dataTransfer.getData("dragId");
     callback?.({ container: element, dragId, dropId });
+    if(dragId && dropId) {
+      dispatch(setDndStatus(false));
+    }
   };
   return {
     onDragOver,
