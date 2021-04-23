@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.1419e9a5.chunk.css",
-    "main.js": "/static/js/main.d1217e62.chunk.js",
-    "main.js.map": "/static/js/main.d1217e62.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.f8f4c703.js",
-    "runtime-main.js.map": "/static/js/runtime-main.f8f4c703.js.map",
-    "static/js/2.29716b4c.chunk.js": "/static/js/2.29716b4c.chunk.js",
-    "static/js/2.29716b4c.chunk.js.map": "/static/js/2.29716b4c.chunk.js.map",
-    "static/js/3.539f2569.chunk.js": "/static/js/3.539f2569.chunk.js",
-    "static/js/3.539f2569.chunk.js.map": "/static/js/3.539f2569.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.1419e9a5.chunk.css.map": "/static/css/main.1419e9a5.chunk.css.map",
-    "static/js/2.29716b4c.chunk.js.LICENSE.txt": "/static/js/2.29716b4c.chunk.js.LICENSE.txt",
-    "static/media/Add.e0de3a43.svg": "/static/media/Add.e0de3a43.svg",
-    "static/media/Close.e2c00e65.svg": "/static/media/Close.e2c00e65.svg"
+    "main.css": "https://rednithin.github.io/Trello/static/css/main.1419e9a5.chunk.css",
+    "main.js": "https://rednithin.github.io/Trello/static/js/main.d1217e62.chunk.js",
+    "main.js.map": "https://rednithin.github.io/Trello/static/js/main.d1217e62.chunk.js.map",
+    "runtime-main.js": "https://rednithin.github.io/Trello/static/js/runtime-main.2b7e999f.js",
+    "runtime-main.js.map": "https://rednithin.github.io/Trello/static/js/runtime-main.2b7e999f.js.map",
+    "static/js/2.29716b4c.chunk.js": "https://rednithin.github.io/Trello/static/js/2.29716b4c.chunk.js",
+    "static/js/2.29716b4c.chunk.js.map": "https://rednithin.github.io/Trello/static/js/2.29716b4c.chunk.js.map",
+    "static/js/3.539f2569.chunk.js": "https://rednithin.github.io/Trello/static/js/3.539f2569.chunk.js",
+    "static/js/3.539f2569.chunk.js.map": "https://rednithin.github.io/Trello/static/js/3.539f2569.chunk.js.map",
+    "index.html": "https://rednithin.github.io/Trello/index.html",
+    "static/css/main.1419e9a5.chunk.css.map": "https://rednithin.github.io/Trello/static/css/main.1419e9a5.chunk.css.map",
+    "static/js/2.29716b4c.chunk.js.LICENSE.txt": "https://rednithin.github.io/Trello/static/js/2.29716b4c.chunk.js.LICENSE.txt",
+    "static/media/Add.e0de3a43.svg": "https://rednithin.github.io/Trello/static/media/Add.e0de3a43.svg",
+    "static/media/Close.e2c00e65.svg": "https://rednithin.github.io/Trello/static/media/Close.e2c00e65.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.f8f4c703.js",
+    "static/js/runtime-main.2b7e999f.js",
     "static/js/2.29716b4c.chunk.js",
     "static/css/main.1419e9a5.chunk.css",
     "static/js/main.d1217e62.chunk.js"
