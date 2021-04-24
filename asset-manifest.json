@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "https://rednithin.github.io/Trello/static/css/main.b22a951d.chunk.css",
-    "main.js": "https://rednithin.github.io/Trello/static/js/main.2efbf8f3.chunk.js",
-    "main.js.map": "https://rednithin.github.io/Trello/static/js/main.2efbf8f3.chunk.js.map",
+    "main.js": "https://rednithin.github.io/Trello/static/js/main.18aaa39b.chunk.js",
+    "main.js.map": "https://rednithin.github.io/Trello/static/js/main.18aaa39b.chunk.js.map",
     "runtime-main.js": "https://rednithin.github.io/Trello/static/js/runtime-main.0410b925.js",
     "runtime-main.js.map": "https://rednithin.github.io/Trello/static/js/runtime-main.0410b925.js.map",
     "static/js/2.74f6850d.chunk.js": "https://rednithin.github.io/Trello/static/js/2.74f6850d.chunk.js",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.0410b925.js",
     "static/js/2.74f6850d.chunk.js",
     "static/css/main.b22a951d.chunk.css",
-    "static/js/main.2efbf8f3.chunk.js"
+    "static/js/main.18aaa39b.chunk.js"
   ]
 }
