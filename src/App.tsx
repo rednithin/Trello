@@ -112,7 +112,7 @@ const App = () => {
           />
         </div>
 
-        {!Object.values(listCollection || {})?.length ? (
+        {!Object.values(listCollection || {})?.length && listCollection != null ? (
           <div className="list-collection--empty">
             <div>
               No Lists are Present. Click on the <b>Add List</b> button to add
