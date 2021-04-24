@@ -27,7 +27,6 @@
   - Copy `useDrag` and `useDrop` hooks.
   - Copy `DNDContext`.
 
-
 ## Running Project
 
 ### Installation of Dependencies
