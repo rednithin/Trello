@@ -6,6 +6,8 @@ import AddListModal from "./components/AddListModal";
 import AddTaskModal from "./components/AddTaskModal";
 import { useAppContext } from "./state/AppContext";
 import { setAddListModalStatus } from "./state/AppContext/actions";
+import { ReactComponent as Github } from "./icons/Github.svg";
+import Button from "./lib-components/Button";
 
 const App = () => {
   const [listCollection, setListCollection] = useIDB<Record<string, IList>>({
@@ -100,32 +102,40 @@ const App = () => {
   const [_, dispatch] = useAppContext();
 
   return (
-    <div className="app">
+    <section className="app">
       <div className="app__heading">Trello Board</div>
-      <div className="app__subheading">
-        <button onClick={() => dispatch(setAddListModalStatus(true))}>
-          Add List
-        </button>
-      </div>
-      <div className="list-collection">
-        {Object.values(listCollection || {})?.map((list) => (
-          <List
-            key={list.id}
-            item={list}
-            callback={dropCallback}
-            removeList={removeList}
-            removeTask={removeTask}
+      <div className="app__content">
+        <div className="app__subheading">
+          <Button
+            value="Add List"
+            onClick={() => dispatch(setAddListModalStatus(true))}
           />
-        ))}
-        {Array(8)
-          .fill(0)
-          .map((x) => (
-            <div className="list list--dummy"></div>
+        </div>
+        <div className="list-collection">
+          {Object.values(listCollection || {})?.map((list) => (
+            <List
+              key={list.id}
+              item={list}
+              callback={dropCallback}
+              removeList={removeList}
+              removeTask={removeTask}
+            />
           ))}
+          {Array(8)
+            .fill(0)
+            .map((x) => (
+              <div className="list list--dummy"></div>
+            ))}
+        </div>
+        <AddListModal addNewList={addNewList} />
+        <AddTaskModal addNewTask={addNewTask} />
       </div>
-      <AddListModal addNewList={addNewList} />
-      <AddTaskModal addNewTask={addNewTask} />
-    </div>
+      <div className="app__footer">
+        <a href="https://github.com/rednithin/Trello">
+          <Github height={50} width={50} />
+        </a>
+      </div>
+    </section>
   );
 };
 

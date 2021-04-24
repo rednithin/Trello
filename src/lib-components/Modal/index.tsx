@@ -18,11 +18,16 @@ const Modal: React.FC<IModalProps> = ({
     return null;
   }
   return (
-    <div className="modal">
-      <div className="modal__content">
+    <div className="modal" onClick={() => setIsOpen(false)}>
+      <div className="modal__content" onClick={(e) => e.stopPropagation()}>
         <div className="modal__heading">
           <div>{title}</div>
-          <Close width={24} height={24} onClick={() => setIsOpen(false)} />
+          <Close
+            className="cursor-pointer"
+            width={24}
+            height={24}
+            onClick={() => setIsOpen(false)}
+          />
         </div>
         <div className="modal__children">{children}</div>
       </div>

@@ -40,6 +40,7 @@ const List: React.FC<IListProps> = ({
       <div className="list__heading">
         <div>{item.name}</div>
         <Close
+          className="cursor-pointer"
           height={24}
           width={24}
           onClick={() => removeList({ listId: item.id })}
@@ -57,6 +58,7 @@ const List: React.FC<IListProps> = ({
       </div>
       <div className="list__add_task">
         <Add
+          className="cursor-pointer"
           width={50}
           height={50}
           onClick={() =>

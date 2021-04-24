@@ -1,5 +1,9 @@
 .app {
   font-size: large;
+  font-family: "Fira Sans";
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .app__heading {
@@ -7,6 +11,16 @@
   font-size: xx-large;
   padding: 20px 0px;
   border: 2px solid black;
+}
+
+.app__content {
+  flex: 1;
+}
+
+.app__footer {
+  border-top: 2px solid black;
+  padding: 10px;
+  text-align: center;
 }
 
 .app__subheading {
@@ -22,4 +36,8 @@
 .list-collection {
   display: flex;
   flex-wrap: wrap;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }

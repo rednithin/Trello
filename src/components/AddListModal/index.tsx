@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
+import Button from "../../lib-components/Button";
 import Modal from "../../lib-components/Modal";
 import { useAppContext } from "../../state/AppContext";
 import { setAddListModalStatus } from "../../state/AppContext/actions";
@@ -40,19 +41,23 @@ const AddListModal: React.FC<IAddListModalProps> = ({ addNewList }) => {
       setIsOpen={(status) => dispatch(setAddListModalStatus(status))}
     >
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div>
-          <div>
-            <label htmlFor="addListName">List Name: </label>
+        <div className="formfield">
+          <div className="formfield__label">
+            <label htmlFor="addListName">List Name</label>
+          </div>
+          <div className="formfield__input">
             <input
               id="addListName"
               placeholder="Pending Tasks"
               {...register("name", { required: true })}
             />
           </div>
-          <div>{errors.name && <span>This field is required</span>}</div>
+          <div className="formfield__error">
+            {errors.name && <span>This field is required</span>}
+          </div>
         </div>
 
-        <input type="submit" value="Add New List" />
+        <Button type="submit" value="Add New List" />
       </form>
     </Modal>
   );

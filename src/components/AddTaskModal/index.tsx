@@ -1,8 +1,10 @@
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import Modal from "../../lib-components/Modal";
+import FormField from "../../lib-components/FormField";
 import { useAppContext } from "../../state/AppContext";
 import { setAddTaskModalStatus } from "../../state/AppContext/actions";
+import Button from "../../lib-components/Button";
 
 interface IAddTaskModalProps {
   addNewTask: (args: any) => void;
@@ -40,31 +42,31 @@ const AddTaskModal: React.FC<IAddTaskModalProps> = ({ addNewTask }) => {
       setIsOpen={(status) => dispatch(setAddTaskModalStatus(status))}
     >
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div>
-          <div>
-            <label htmlFor="addTaskName">Task Name: </label>
+        <FormField
+          label={<label htmlFor="addTaskName">Task Name</label>}
+          input={
             <input
               id="addTaskName"
               placeholder="Buy Milk"
               {...register("name", { required: true })}
             />
-          </div>
-          <div>{errors.name && <span>This field is required</span>}</div>
-        </div>
+          }
+          error={errors.name && <span>This field is required</span>}
+        />
 
-        <div>
-          <div>
-            <label htmlFor="addTaskDescription">Task Description: </label>
+        <FormField
+          label={<label htmlFor="addTaskDescription">Task Description</label>}
+          input={
             <textarea
               id="addTaskDescription"
               placeholder="Buy Milk Tomorrow Morning"
               {...register("description", { required: true })}
             />
-          </div>
-          <div>{errors.description && <span>This field is required</span>}</div>
-        </div>
+          }
+          error={errors.description && <span>This field is required</span>}
+        />
 
-        <input type="submit" value="Add New Task" />
+        <Button type="submit" value="Add New Task" />
       </form>
     </Modal>
   );

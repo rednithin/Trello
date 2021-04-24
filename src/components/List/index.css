@@ -20,8 +20,8 @@
 .list__heading {
   text-align: center;
   word-wrap: break-word;
-  padding: 5px;
-  border-bottom: 2px solid red;
+  padding: 10px;
+  border-bottom: 2px solid tomato;
   display: flex;
   justify-content: space-between;
 }
@@ -29,7 +29,7 @@
 .list__tasks {
   padding: 5px;
   flex: 1;
-  border-bottom: 2px solid red;
+  border-bottom: 2px solid tomato;
 }
 
 .list__add_task {

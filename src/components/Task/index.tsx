@@ -13,10 +13,11 @@ const Task: React.FC<ITaskProps> = ({ item, listId, removeTask }) => {
   const draggableProps = useDrag();
 
   return (
-    <div id={item.id} className="task" {...draggableProps}>
+    <div id={item.id} className="task cursor-pointer" {...draggableProps}>
       <div className="task__heading">
         <div>{item.name}</div>
         <Close
+          className="cursor-pointer"
           height={24}
           width={24}
           onClick={() => removeTask({ listId, taskId: item.id })}
