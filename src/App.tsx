@@ -111,22 +111,32 @@ const App = () => {
             onClick={() => dispatch(setAddListModalStatus(true))}
           />
         </div>
-        <div className="list-collection">
-          {Object.values(listCollection || {})?.map((list) => (
-            <List
-              key={list.id}
-              item={list}
-              callback={dropCallback}
-              removeList={removeList}
-              removeTask={removeTask}
-            />
-          ))}
-          {Array(8)
-            .fill(0)
-            .map((x) => (
-              <div className="list list--dummy"></div>
+
+        {!Object.values(listCollection || {})?.length ? (
+          <div className="list-collection--empty">
+            <div>
+              No Lists are Present. Click on the <b>Add List</b> button to add
+              one.
+            </div>
+          </div>
+        ) : (
+          <div className="list-collection">
+            {Object.values(listCollection || {})?.map((list) => (
+              <List
+                key={list.id}
+                item={list}
+                callback={dropCallback}
+                removeList={removeList}
+                removeTask={removeTask}
+              />
             ))}
-        </div>
+            {Array(8)
+              .fill(0)
+              .map((x) => (
+                <div className="list list--dummy"></div>
+              ))}
+          </div>
+        )}
         <AddListModal addNewList={addNewList} />
         <AddTaskModal addNewTask={addNewTask} />
       </div>

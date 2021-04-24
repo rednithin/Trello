@@ -46,16 +46,25 @@ const List: React.FC<IListProps> = ({
           onClick={() => removeList({ listId: item.id })}
         />
       </div>
-      <div className="list__tasks">
-        {Object.values(item.tasks)?.map((task) => (
-          <Task
-            key={task.id}
-            item={task}
-            listId={item.id}
-            removeTask={removeTask}
-          />
-        ))}
-      </div>
+      {!Object.values(item.tasks).length ? (
+        <div className="list__tasks list_tasks--empty">
+          <div>
+            No Tasks are Present. Click on the <b>+</b> button below to add one.
+          </div>
+        </div>
+      ) : (
+        <div className="list__tasks">
+          {Object.values(item.tasks)?.map((task) => (
+            <Task
+              key={task.id}
+              item={task}
+              listId={item.id}
+              removeTask={removeTask}
+            />
+          ))}
+        </div>
+      )}
+
       <div className="list__add_task">
         <Add
           className="cursor-pointer"

@@ -29,12 +29,25 @@
 .list__tasks {
   padding: 5px;
   flex: 1;
-  border-bottom: 2px solid tomato;
+}
+
+.list_tasks--empty {
+  text-align: center;
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: saddlebrown;
+}
+
+.list_tasks--empty b {
+  font-size: x-large;
 }
 
 .list__add_task {
   text-align: center;
   padding: 5px;
+  border-top: 2px solid tomato;
 }
 
 .list__dnd_mask {
