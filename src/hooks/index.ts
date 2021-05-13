@@ -101,19 +101,44 @@ function useIDB<Type>({
   key,
   initialValue,
 }: IUseIDB<Type>): [Type, (args: Type) => void] {
-  const [state, setState] = useState<Type>();
-
-  useEffect(() => {
-    get(key)
-      .then((value: Type) => {
-        if (value) {
-          setState(value);
-        } else {
-          setState(initialValue);
+  const initialState = {
+    "c6b2e9d9-3a52-4d2c-90fc-d6faea4b4075": {
+        "id": "c6b2e9d9-3a52-4d2c-90fc-d6faea4b4075",
+        "name": "Left Sidebar",
+        "tasks": {
+            "2c329ccc-3234-4dc2-b8ad-d9922d36f059": {
+                "id": "2c329ccc-3234-4dc2-b8ad-d9922d36f059",
+                "name": "Move X Steps",
+                "key": "MoveXSteps",
+                "description": "dasfa"
+            },
+            "2c329ccd-3234-4dc2-b8ad-d9922d36f059": {
+              "id": "2c329ccd-3234-4dc2-b8ad-d9922d36f059",
+              "name": "Rotate X Degrees",
+              "key": "RotateXDegrees",
+              "description": "dasfa"
+          }
         }
-      })
-      .catch(() => set(key, initialValue).then(() => setState(initialValue)));
-  }, [initialValue, key]);
+    },
+    "837ca319-703f-4b72-b70f-83b3f789d6ac": {
+        "id": "837ca319-703f-4b72-b70f-83b3f789d6ac",
+        "name": "Middle Area",
+        "tasks": {}
+    }
+};
+  const [state, setState] = useState<Type>(initialState as unknown as Type);
+
+  // useEffect(() => {
+  //   get(key)
+  //     .then((value: Type) => {
+  //       if (value) {
+  //         setState(value);
+  //       } else {
+  //         setState(initialValue);
+  //       }
+  //     })
+  //     .catch(() => set(key, initialValue).then(() => setState(initialValue)));
+  // }, [initialValue, key]);
 
   const customSetState = (value: Type) => {
     set(key, value).then(() => setState(value));

@@ -5,14 +5,17 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { AppContextProvider } from "./state/AppContext";
 import { DnDContextProvider } from "./state/DNDContext";
+import { TaskValueContextProvider } from "./state/TaskValueContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppContextProvider>
-      <DnDContextProvider>
-        <App />
-      </DnDContextProvider>
-    </AppContextProvider>
+    <TaskValueContextProvider>
+      <AppContextProvider>
+        <DnDContextProvider>
+          <App />
+        </DnDContextProvider>
+      </AppContextProvider>
+    </TaskValueContextProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

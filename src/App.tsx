@@ -8,6 +8,7 @@ import { useAppContext } from "./state/AppContext";
 import { setAddListModalStatus } from "./state/AppContext/actions";
 import { ReactComponent as Github } from "./icons/Github.svg";
 import Button from "./lib-components/Button";
+import { v4 as uuidv4 } from "uuid";
 
 const App = () => {
   const [listCollection, setListCollection] = useIDB<Record<string, IList>>({
@@ -15,6 +16,7 @@ const App = () => {
     initialValue: {},
   });
 
+  console.log(listCollection);
   const dropCallback: UseDropCallbackType = ({ container, dragId, dropId }) => {
     let element = document.querySelector(
       `.task[data-drag-id="${dragId}"]`
@@ -40,7 +42,10 @@ const App = () => {
       };
       let movedTask = newListCollection[initialListId].tasks[element.id];
 
+      let copiedTask = {...movedTask, id: uuidv4()}
+
       delete newListCollection[initialListId].tasks[element.id];
+      newListCollection[initialListId].tasks[copiedTask.id] = copiedTask;
 
       newListCollection = {
         ...newListCollection,

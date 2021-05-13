@@ -4,6 +4,7 @@ export interface ITask {
   id: string;
   name: string;
   description: string;
+  key: string;
 }
 
 export const createNewTask = (name: string, description: string): ITask => {
@@ -11,6 +12,7 @@ export const createNewTask = (name: string, description: string): ITask => {
     id: uuidv4(),
     name,
     description,
+    key: ''
   };
 };
 

@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import React, { createContext, useState } from "react";
 import { initialState, reducer } from "./reducer";
 
 export const AppContext = createContext({
@@ -19,8 +19,11 @@ export const AppContextProvider: React.FC<IAppContextProvider> = ({
 }) => {
   const [globalState, dispatch] = React.useReducer(reducer, initialState);
 
+  const [taskValues, setTaskValues] = useState({});
+
+
   return (
-    <AppContext.Provider value={[globalState, dispatch]}>
+    <AppContext.Provider value={[globalState, dispatch, {taskValues, setTaskValues}]}>
       {children}
     </AppContext.Provider>
   );
